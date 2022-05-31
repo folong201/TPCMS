@@ -12,19 +12,20 @@
             Welcome to the admin pages
         </h1>
     </center>
+
     <center>
         <h2>
             ajouter des elements
         </h2>
     </center>
-    <a href="creation/addMember/">
+    <a href="creation/addProject/addProject.php">
         Ajouter un project
     </a>
     <br>
     <a href="creation/addMember/addMemberForm.php">
         Ajouter un membre
-    </a>
-    <a href="creation/addMember/">
+    </a> <br>
+    <a href="addAdmin/addAdminForm.php">
         Ajouter un admin
     </a>
     <br>
@@ -68,47 +69,47 @@
             metre a jour des elements
         </h2>
     </center>
-    <a href="creation/addMember/">
-        Ajouter un project
+    <a href="creation/addProject/list.php">
+        metre a jour ou ssuprimer un project
     </a>
     <br>
     <a href="creation/addMember/addMemberForm.php">
-        Ajouter un membre
-    </a>
-    <a href="creation/addMember/">
-        Ajouter un admin
-    </a>
-    <br>
-    <a href="creation/addMember/">
-        Ajouter une activiter
+        metre a jour ou ssuprimer un membre
+    </a> <br>
+    <a href="addAdmin/list.php">
+        metre a jour ou ssuprimer un admin
     </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter une annonce
+        metre a jour ou ssuprimer une activiter
     </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter une pub
+        metre a jour ou ssuprimer une annonce
     </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter un membre de la comune
+        metre a jour ou ssuprimer une pub
     </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter un project
+        metre a jour ou ssuprimer un membre de la comune
     </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter une annonce
+        metre a jour ou ssuprimer un project
+    </a>
     <br>
     <a href="creation/addMember/">
-        Ajouter un EMployer
+        metre a jour ou ssuprimer une annonce
+    <br>
+    <a href="creation/addMember/">
+        metre a jour ou ssuprimer un EMployer
     </a>
     <br>
     
     <a href="creation/addMember/">
-        Ajouter un site touristique
+        metre a jour ou ssuprimer un site touristique
     </a>
     <br>
 <br> <br>
@@ -127,7 +128,7 @@
     <br>
     <a href="creation/addMember/addMemberForm.php">
         Ajouter un membre
-    </a>
+    </a> <br>
     <a href="creation/addMember/">
         Ajouter un admin
     </a>

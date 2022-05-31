@@ -19,7 +19,8 @@
 
                 <label for="password">Password</label>
                 <input type="password" name="pass" id="pass">
-                
+                <input type="text" name="surname"> <br>
+                <input type="text" name="poste"> <br>
                 <br>
                 <input type="submit">
             </form>
