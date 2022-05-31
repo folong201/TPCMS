@@ -10,7 +10,7 @@
         <input type="text" name="name" require > <br> <br>
 
         <textarea name="description" id="id" cols="30" rows="10" require    >
-biographie de l'activiter
+description de l'activiter
         </textarea> <br> <br>
 
        
