@@ -1,3 +1,7 @@
+<?php
+    header('Location: frontCms/index.php');
+    exit;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
