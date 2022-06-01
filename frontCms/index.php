@@ -177,13 +177,13 @@
             <img src="images/b3.jpeg" class="user" alt="">
             <h3>john deo | <span>1er Adjoin</span></h3>
             <h3>32 Ans </h3>
-            <div class="stars">
+            <!-- <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -207,11 +207,11 @@
                     
                     
                     <div class="box">
-            <div class="icons">
+            <!-- <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
-            </div>
+            </div> -->
             <div class="image">
                 <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="">
             </div>
@@ -236,11 +236,11 @@
                 }
             ?>
         <div class="box">
-            <div class="icons">
+            <!-- <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
-            </div>
+            </div> -->
             <div class="image">
                 <img src="images/b3.jpeg" alt="">
             </div>
@@ -260,11 +260,11 @@
         </div>
 
         <div class="box">
-            <div class="icons">
+            <!-- <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
-            </div>
+            </div> -->
             <div class="image">
                 <img src="images/b3.jpeg" alt="">
             </div>
@@ -284,11 +284,11 @@
         </div>
 
         <div class="box">
-            <div class="icons">
+            <!-- <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
-            </div>
+            </div> -->
             <div class="image">
                 <img src="images/b3.jpeg" alt="">
             </div>

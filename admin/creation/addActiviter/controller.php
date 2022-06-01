@@ -12,7 +12,7 @@
 
     function update($name,$description,$image,$id){
         global $bdd;
-        $sql = "UPDATE activiter SET name=? description=? photo=? WHERE id = ?";
+        $sql = "UPDATE activiter SET name=? ,description=?, photo=? WHERE id = ?";
         $requette = $bdd->prepare($sql);
         $requette->execute(array($name,$description,$image,$id));
     }

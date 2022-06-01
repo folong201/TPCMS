@@ -4,8 +4,9 @@ session_start();
 require_once('dbCreation.php');
 //initialisation de bases de donne et des tables 
 // initDb();
-initTable();
-die("here after the calling of init table functio");
+// initTable();
+// die("ici");
+// die("here after the calling of init table functio");
 //creation de la connection a la base de donne
 $bdd = new PDO('mysql:host=localhost;dbname=CMS','root','');
     //function to check if someone is connected
@@ -90,7 +91,7 @@ function addMember($name,$biographie,$dateNais,$poste,$image){
 }
 function addEmployer($name,$biographie,$dateNais,$poste,$image){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO Employer (name,biographie,dateNais,poste,photo) VALUES(?,?,?,?,?)");
+    $requette = $bdd->prepare("INSERT INTO employer (name,biographie,dateNais,poste,photo) VALUES(?,?,?,?,?)");
     // $data =
     $requette->execute(array($name,$biographie,$dateNais,$poste,$image));
 }
@@ -127,7 +128,7 @@ function addAnnonce($name,$description,$image){
 
 function addPub($name,$description,$image){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO pub (name,description,image) VALUES(?,?,?)");
+    $requette = $bdd->prepare("INSERT INTO pub (name,description,photo) VALUES(?,?,?)");
     // $data =
     $requette->execute(array($name,$description,$image));  
 }

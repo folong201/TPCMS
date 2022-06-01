@@ -1,12 +1,12 @@
 <?php
     require_once('controller.php');
-    if (isset($_POST['surname']) && 
-    isset($_POST['userName']) && 
-    isset($_POST['pass']) && 
-    isset($_POST['poste']) && 
-    isset($_POST['id']))
+    if (isset($_POST['name']) && 
+    isset($_POST['description']) &&
+    isset($_POST['id'])&&
+    isset($_FILES['photo']))
     {
-        update($_POST['userName'],$_POST['surname'],$_POST['poste'],md5($_POST['pass']),$_POST['id']);
+        //$name,$description,$image,$id
+        update($_POST['name'],$_POST['description'],$_FILES['photo']['name'],$_POST['id']);
         // die("stop");
 
         //redirection

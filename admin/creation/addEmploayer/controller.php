@@ -4,16 +4,16 @@
     //fontion pour suprimer les element lieu dans la base donnes
     function delete($id){
         global $bdd;
-        $sql = "DELETE FROM Lieux where id = ?";
+        $sql = "DELETE FROM employer where id = ?";
         $requette = $bdd->prepare($sql);
         $requette->execute(array($id));
-
     }
 
-    function update($name,$description,$image,$id){
+    function update($name,$biographie,$dateNais,$poste,$image,$id){
+        //$name,$biographie,$dateNais,$poste,$image,$id
         global $bdd;
-        $sql = "UPDATE Lieux SET name=? description=? image=? WHERE id = ?";
+        $sql = "UPDATE employer SET name='$name',dateNais='$dateNais',poste='$poste',biographie='$biographie', photo='$image', WHERE id ='$id";
         $requette = $bdd->prepare($sql);
-        $requette->execute(array($name,$description,$image,$id));
+        $requette->execute();
     }
 ?>

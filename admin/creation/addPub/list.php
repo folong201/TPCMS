@@ -10,18 +10,18 @@
     network_cell
     <?php
         $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
-        $sql = $database->query( "SELECT * FROM admin");
+        $sql = $database->query( "SELECT * FROM pub");
 
         while($donnees = $sql->fetch()){
             ?>
-            <br>
+
         <a href="updateForm.php?id=<?php echo$donnees['id']; ?>">update</a> <br>
 
         <a href="delete.php?delete=0&id=<?php echo$donnees['id'] ?>">delete</a> <br>
             <?php
 
             $id = $donnees['id'];
-            echo"nom du projet : ".$donnees['surname']."<br>";
+            echo"nom du projet : ".$donnees['name']."<br>";
             echo $donnees['description']."<br>";
             // echo;
 

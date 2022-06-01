@@ -13,11 +13,11 @@
         //  televerser();
         
         
+        televerser();
     }else{
                 echo"donner manqaunte";
          }
     
-        televerser();
         
         header("Location: ../../index.php");
 ?>

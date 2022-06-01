@@ -15,12 +15,12 @@
             <form action="register.php" method="post">
 
                 <label for="userName">UserName</label>
-                <input type="text" name="userName" id="userName"> <br>
+                <input type="text" name="userName" id="userName"> <br><br>
 
                 <label for="password">Password</label>
-                <input type="password" name="pass" id="pass">
-                <input type="text" name="surname"> <br>
-                <input type="text" name="poste"> <br>
+                <input type="password" name="pass" id="pass"> <br><br>
+                <input type="text" name="surname" placeholder="surname"> <br><br>
+                <input type="text" name="poste" placeholder="poste"> <br><br>
                 <br>
                 <input type="submit">
             </form>

@@ -12,17 +12,16 @@
         $dateNais = $_POST['dateNais'];
         $poste = $_POST['poste'];
         $image = $filename = $_FILES["photo"]["name"];
-        
         addMember($nom,$biographie,$dateNais,$poste,$image);
-        die("bloc");
-        //  televerser();
+        televerser();
+
         
         
     }else{
                 echo"donner manqaunte";
          }
     
-        televerser();
+     televerser();
         
         header("Location: ../../index.php");
 ?>

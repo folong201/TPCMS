@@ -169,6 +169,19 @@
     <a href="disconnect.php">
         Se deconnecter
     </a>
+
+    <div class="container">
+        <center>
+            <h1>
+                initialiser la base de donnees.
+            </h1>
+        </center>
+    </div>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

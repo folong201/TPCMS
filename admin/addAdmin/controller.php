@@ -70,7 +70,7 @@ function televerser(){
         }
         // $data =
         $requette->execute();
-        die("blocus");
+        // die("blocus");
         // die("mince");
         // $requette->execute(array($titre,$description,$instigateur,$debut,$duree,$image,$createur,$id));
         // televerser();
