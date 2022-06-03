@@ -5,12 +5,17 @@
     <title>Formulaire de creation d'un Lieux touristique</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter un lieu touristique
+        </h1>
+</center>
     <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
-    <label for="name">nom Du menbre</label>
+    <label for="name">nom site tourristique</label>
         <input type="text" name="name" require > <br> <br>
 
         <textarea name="description" id="id" cols="30" rows="10" require    >
-            biographie du membre
+description du site touristique
         </textarea> <br> <br>
 
        

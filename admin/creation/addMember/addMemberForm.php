@@ -5,6 +5,11 @@
     <title>Formulaire de creation d'un nouveau membre</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter un membre
+        </h1>
+    </center>
     <form action="addMemberSave.php" method="post" enctype="multipart/form-data">
     <label for="name">nom Du menbre</label>
         <input type="text" name="name" require > <br> <br>

@@ -5,6 +5,11 @@
     <title>Formulaire de creation d'une activiter</title>
 </head>
 <body>
+    <center>
+        <h1>
+            ajouter une activiter
+        </h1>
+    </center>
     <form action="addActiviterSave.php" method="post" enctype="multipart/form-data">
     <label for="name">Nom de l'activiter</label>
         <input type="text" name="name" require > <br> <br>

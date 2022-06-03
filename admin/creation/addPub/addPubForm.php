@@ -5,6 +5,11 @@
     <title>Formulaire de creation d'une Pub</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter une pub
+        </h1>
+    </center>
     <form action="addPubSave.php" method="post" enctype="multipart/form-data">
     <label for="name">nom Du menbre</label>
         <input type="text" name="name" require > <br> <br>

@@ -5,6 +5,11 @@
     <title>Formulaire de creation d'une Annonce</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter une annonce
+        </h1>
+</center>
     <form action="addAnnoceSave.php" method="post" enctype="multipart/form-data">
     <label for="name">nom De L'Annonce</label>
         <input type="text" name="name" require > <br> <br>

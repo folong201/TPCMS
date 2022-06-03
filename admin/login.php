@@ -10,18 +10,47 @@
     <title>Login</title>
 </head>
 <body>
+    <style>
+        .container{
+            display: flex;
+            box-shadow: 2px 2px 2px #f60;
+            justify-content: center;
+            /* max-width: 50%; */
+        }
+        input{
+            margin: 10px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        .submit{
+            border: none;
+            font-size: larger;
+            text-align: center;
+            width: 150px;
+            outline: 1px solid #f60;
+            box-shadow: 2px 2px 2px #f60;
+            margin-left: 50px;
+        }
+        </style>
+        <script>
+
+        </script>
     <div class="container">
         <div class="form">
             <form action="traitLogin.php" method="post">
-                <label for="userName">UserName</label>
-                <input type="text" name="userName" id="userName"> <br>
-                <label for="password">Password</label>
-                <input type="password" name="pass" id="pass">
+                <label for="userName">UserName :</label>
+                <input type="text" name="userName" id="userName" require> <br>
+
+                <label for="password">Password :</label>
+                <input type="password" name="pass" id="pass" require>
+
                 <br>
-                <input type="submit">
+                <input type="submit" class="submit" onclick="pass();" id="submit">
             </form>
         </div>
     </div>
+    <script src="tester.js"></script>
 </body>
 </html>
 

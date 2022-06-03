@@ -10,6 +10,11 @@
     <title>Create and admin</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter un admin
+        </h1>
+    </center>
     <div class="container">
         <div class="form">
             <form action="register.php" method="post">

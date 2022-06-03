@@ -5,6 +5,11 @@
     <title>Formulaire d'upload de fichiers</title>
 </head>
 <body>
+<center>
+        <h1>
+            ajouter un project
+        </h1>
+</center>
     <form action="addProjectSave.php" method="post" enctype="multipart/form-data">
     <label for="titre">titre du project</label>
         <input type="text" name="titre" require > <br> <br>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 //inportation du fichier pour creer les diferentes base de donnees
-require_once('dbCreation.php');
+// require_once('dbCreation.php');
 //initialisation de bases de donne et des tables 
 // initDb();
 // initTable();
@@ -9,10 +9,11 @@ require_once('dbCreation.php');
 // die("here after the calling of init table functio");
 //creation de la connection a la base de donne
 $bdd = new PDO('mysql:host=localhost;dbname=CMS','root','');
-    //function to check if someone is connected
-    function checkIfConnected(){
+//function to check if someone is connected
+function checkIfConnected(){
+        // die("boc");
         // && isset($_SESSION['userName']) && ($_SESSION['userName']!=null)
-        if(!$_SESSION['connected']){
+        if($_SESSION['connected']!=1){
             header("Location: login.php");
             exit;
         }
