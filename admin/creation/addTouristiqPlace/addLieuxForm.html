@@ -2,28 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Formulaire de creation d'une activiter</title>
+    <title>Formulaire de creation d'un Lieux touristique</title>
     <link rel="stylesheet" href="../../../assets/css/add.css">
 </head>
 <body>
-    <center>
-        <h1>
-            ajouter une activiter
-        </h1>
-    </center>
     <div class="cont">
-    <form action="addActiviterSave.php" method="post" enctype="multipart/form-data">
-        <h1>Creation d'une Activite</h1>
-    <label for="name">Nom de l'activiter</label>
+    <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
+    <h1>Ajout d'un lieu touristique</h1>
+        <label for="name">nom Du menbre</label>
         <input type="text" name="name" require > <br> <br>
 
         <textarea name="description" id="id" cols="30" rows="10" require    >
-description de l'activiter
+            biographie du membre
         </textarea> <br> <br>
 
        
+        <!-- <label for="duree">Duree</label>
+        <input type="text" name="duree" require > -->
         <br> <br>
-        <h2>image de L'activiter</h2>
+        <h2>image du Lieux</h2>
         <label for="fileUpload">Fichier Image:</label>
         <input type="file" name="photo" id="fileUpload"> <br> <br>
 

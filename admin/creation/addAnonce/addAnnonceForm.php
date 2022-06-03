@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire de creation d'une Annonce</title>
+    <link rel="stylesheet" href="../../../assets/css/add.css">
 </head>
 <body>
 <center>
@@ -10,7 +11,9 @@
             ajouter une annonce
         </h1>
 </center>
+    <div class="cont">
     <form action="addAnnoceSave.php" method="post" enctype="multipart/form-data">
+        <h1>Creation d'une Annonce</h1>
     <label for="name">nom De L'Annonce</label>
         <input type="text" name="name" require > <br> <br>
 
@@ -28,5 +31,6 @@ description de L'annonce
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+</div>
 </body>
 </html>

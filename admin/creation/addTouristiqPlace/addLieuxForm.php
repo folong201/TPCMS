@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire de creation d'un Lieux touristique</title>
+    <link rel="stylesheet" href="../../../assets/css/add.css">
 </head>
 <body>
+
 <center>
         <h1>
             ajouter un lieu touristique
@@ -12,6 +14,11 @@
 </center>
     <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
     <label for="name">nom site tourristique</label>
+
+    <div class="cont">
+    <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
+    <h1>Ajout d'un lieu touristique</h1>
+        <label for="name">nom Du menbre</label>
         <input type="text" name="name" require > <br> <br>
 
         <textarea name="description" id="id" cols="30" rows="10" require    >
@@ -28,5 +35,6 @@ description du site touristique
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+</div>
 </body>
 </html>
