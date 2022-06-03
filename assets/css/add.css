@@ -1,0 +1,52 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+.cont{
+    background-color: rgba(0, 51, 75, 0.8);
+    color: #fff;
+    width: 550px;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 5%;
+    border-radius: 15px;
+
+}
+input[type='text'],input[type='date'],textarea{
+    width: 97%;
+    height: 30px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+   
+}
+input[type='submit']{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 140, 255);
+    color: #fff;
+    border: none;
+    float: right;
+    
+}
+table,tr,td{
+    /* border: 1px solid #fff;
+    border-collapse: collapse; */
+    padding-top: 10px;
+    text-align: left;
+    text-transform: capitalize;
+    float: inline-start;
+}
+.cont table tr td label{
+    padding-top:15px ;
+    font-size: 18px;
+}
+tr{
+    height: 20px;
+}
+.cont form table{
+    width: 100%;
+}
