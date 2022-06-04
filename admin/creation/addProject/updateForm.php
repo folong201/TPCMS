@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire d'upload de fichiers</title>
+    <link rel="stylesheet" href="../../../assets/css/add.css">
 </head>
 <body>
+    <div class="cont">
     <form action="update.php" method="post" enctype="multipart/form-data">
     <label for="titre">titre du project</label>
         <input type="text" name="titre" require > <br> <br>
@@ -29,5 +31,6 @@
         <input type="submit" name="submit" value="Upload">
         <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 5 Mo.</p>
     </form>
+    </div>
 </body>
 </html>

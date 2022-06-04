@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulaire de creation d'une activiter</title>
+        <link rel="stylesheet" href="../../../assets/css/add.css">
     </head>
     <body>
+        <div class="cont">
         <form action="update.php" method="post" enctype="multipart/form-data">
+            <h1>mettre a jour une activiter</h1>
             <label for="name">Nom de l'activiter</label>
             <input type="text" name="name" require > <br> <br>
             
@@ -22,5 +25,6 @@ description de l'activiter
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+    </div>
 </body>
 </html>

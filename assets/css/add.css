@@ -13,7 +13,7 @@ body{
     border-radius: 15px;
 
 }
-input[type='text'],input[type='date'],textarea{
+input[type='text'],input[type='date'],input[type='password'],textarea{
     width: 97%;
     height: 30px;
     background: none;
@@ -22,6 +22,10 @@ input[type='text'],input[type='date'],textarea{
     color: #fff;
     font-size: 16px;
    
+}
+label{
+    font-size: 18px;
+    color: #fff;
 }
 input[type='submit']{
     width: 100px;
@@ -49,4 +53,18 @@ tr{
 }
 .cont form table{
     width: 100%;
+}
+a{
+    padding: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+}
+a:hover{
+    color: rgb(0, 110, 255);
+}
+h2{
+    text-transform: capitalize;
 }

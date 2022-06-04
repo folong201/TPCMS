@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulaire de creation d'un nouveau membre</title>
+        <link rel="stylesheet" href="../../../assets/css/add.css">
     </head>
     <body>
+        <div class="cont">
     <form action="update.php" method="post" enctype="multipart/form-data">
-        
+        <h1>Modification d'un Membre</h1>
         <label for="name">nom Du menbre</label>
         <input type="text" name="name" require > <br> <br>
         
@@ -32,5 +34,6 @@
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+    </div>
 </body>
 </html>

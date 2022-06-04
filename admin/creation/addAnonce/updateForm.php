@@ -3,10 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulaire de creation d'une activiter</title>
+        <link rel="stylesheet" href="../../assets/css/add.css">
     </head>
     <body>
+        <div class="cont"></div>
         <form action="update.php" method="post" enctype="multipart/form-data">
-            <label for="name">Nom de l'activiter</label>
+        <h1>Mettre a jour une annonce</h1>    
+        <label for="name">Nom de l'activiter</label>
             <input type="text" name="name" require > <br> <br>
             
         <textarea name="description" id="id" cols="30" rows="10" require >
@@ -22,5 +25,6 @@ description de l'activiter
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+    </div>
 </body>
 </html>

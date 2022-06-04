@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="../../../assets/css/add.css">
     <title>Formulaire de creation d'un nouveau membre</title>
 </head>
 <body>
