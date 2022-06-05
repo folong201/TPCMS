@@ -18,6 +18,7 @@ function checkIfConnected(){
             exit;
         }
     }
+
     //fontion pour televerser les fichier images
 function televerser(){
 
@@ -25,7 +26,7 @@ function televerser(){
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Vérifie si le fichier a été uploadé sans erreur.
         if(isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0){
-            $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
+            $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png","pdf" => "document/pdf");
             $filename = $_FILES["photo"]["name"];
             $filetype = $_FILES["photo"]["type"];
             $filesize = $_FILES["photo"]["size"];
@@ -39,6 +40,10 @@ function televerser(){
             if($filesize > $maxsize) die("Error: La taille du fichier est supérieure à la limite autorisée.");
     
             // Vérifie le type MIME du fichier
+            if (isset($_FILES['cv'])) {
+            move_uploaded_file($_FILES["cv"]["tmp_name"], "../../upload/" . $_FILES["cv"]["name"]);
+            }
+            
             if(in_array($filetype, $allowed)){
                 // Vérifie si le fichier existe avant de le télécharger.
                 if(file_exists("../../upload/" . $_FILES["photo"]["name"])){
@@ -90,17 +95,18 @@ function addMember($name,$biographie,$dateNais,$poste,$image){
     // $data =
     $requette->execute(array($name,$biographie,$dateNais,$poste,$image));
 }
-function addEmployer($name,$biographie,$dateNais,$poste,$image){
+function addEmployer($name,$biographie,$dateNais,$poste,$image,$cv){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO employer (name,biographie,dateNais,poste,photo) VALUES(?,?,?,?,?)");
+    $sql = "INSERT INTO employer (name,biographie,dateNais,poste,photo,cv) VALUES(?,?,?,?,?,?)";
+    $requette = $bdd->prepare($sql);
     // $data =
-    $requette->execute(array($name,$biographie,$dateNais,$poste,$image));
+    $requette->execute(array($name,$biographie,$dateNais,$poste,$image,$cv));
 }
 //funtion pour l'ajout d;un lieux
 
 function addLieux($name,$description,$image){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO Lieux (name,description,image) VALUES(?,?,?)");
+    $requette = $bdd->prepare("INSERT INTO Lieux (name,description,photo) VALUES(?,?,?)");
     // $data =
     $requette->execute(array($name,$description,$image));  
 }
@@ -109,22 +115,21 @@ function addLieux($name,$description,$image){
 
 function addActiviter($name,$description,$image){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO activiter (name,description,image) VALUES(?,?,?)");
-    // $data =
-    try{
-
-        $requette->execute(array($name,$description,$image)); 
-    }catch(PDOException $e){
-        return false;
-    }
-    return true;
+    $sql = "INSERT INTO activiter (name,description,photo) VALUES(?,?,?)";
+    $requette = $bdd->prepare($sql);
+    // die($image);
+    $requette->execute(array($name,$description,$image)); 
+    // die("probleme");
+    
 }
 
 function addAnnonce($name,$description,$image){
     global $bdd;
-    $requette = $bdd->prepare("INSERT INTO Annonce (name,description,image) VALUES(?,?,?)");
+    $sql = "INSERT INTO annonce (name,description,photo) VALUES(?,?,?)";
+    $requette = $bdd->prepare($sql);
     // $data =
     $requette->execute(array($name,$description,$image));  
+    // die($image);
 }
 
 function addPub($name,$description,$image){

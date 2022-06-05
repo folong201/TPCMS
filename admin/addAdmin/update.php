@@ -1,4 +1,8 @@
 <?php
+require_once('../function.php');
+checkIfConnected();
+?>
+<?php
     require_once('controller.php');
     if (isset($_POST['surname']) && 
     isset($_POST['userName']) && 

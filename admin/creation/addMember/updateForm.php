@@ -4,32 +4,33 @@ checkIfConnected();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="add.css">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="add.css">
     <title>Formulaire de creation d'un nouveau membre</title>
 </head>
 <body>
 
-<center>
+    <center>
         <h1>
-            ajouter un membre
+            metre a jour un membre
         </h1>
-</center>
-
-   
+    </center>
+    
+    
     <div class="cont">
-    <form action="addMemberSave.php" method="post" enctype="multipart/form-data">
-        <h1>Ajout d'un nouveau membre </h1>
-        <table>
-      
-    <tr>
-        <td><label for="name">nom Du menbre</label></td>
-        <td><input type="text" name="name" require ></td>
-    </tr>
-    <tr>
-        <td><label for="instigateur">Description</label></td>
-        <td><textarea name="biographie" id="id" cols="30" rows="10" require    >
+        <form action="update.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo$_GET['id']; ?>"> <br>
+            <h1>Ajout d'un nouveau membre </h1>
+            <table>
+                
+                <tr>
+                    <td><label for="name">nom Du menbre</label></td>
+                    <td><input type="text" name="name" require ></td>
+                </tr>
+                <tr>
+                    <td><label for="instigateur">Description</label></td>
+                    <td><textarea name="biographie" id="id" cols="30" rows="10" require    >
 biographie du membre
         </textarea></td>
     </tr>

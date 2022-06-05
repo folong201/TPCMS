@@ -1,6 +1,7 @@
 <?php
     require_once('../../function.php');
     // die("bloc");
+    checkIfConnected();
     if (isset($_POST['titre']) && 
     isset($_POST['description']) && 
     isset($_POST['instigateur']) && 

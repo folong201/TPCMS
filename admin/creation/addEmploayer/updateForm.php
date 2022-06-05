@@ -1,3 +1,7 @@
+<?php
+require_once('../../function.php');
+checkIfConnected();
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -29,6 +33,9 @@
 
         <label for="fileUpload">Fichier:</label>
         <input type="file" name="photo" id="fileUpload"> <br> <br>
+        <br>
+        <label for="fileUpload">cv:</label>
+        <input type="file" name="cv" id="fileUpload"> <br> <br>
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>

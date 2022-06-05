@@ -1,4 +1,9 @@
+<?php
+require_once('../function.php');
+checkIfConnected();
+?>
 <?php 
+
 // require_once('../function.php');
 if (isset($_POST['userName']) && isset($_POST['pass'])&& isset($_POST['surname'])&& isset($_POST['poste'])) {
     $base = new PDO('mysql:host=localhost;dbname=CMS','root','');

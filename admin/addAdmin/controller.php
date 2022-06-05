@@ -1,4 +1,6 @@
 <?php
+require_once('../function.php');
+checkIfConnected();
     // require_once('../../function.php');
     $bdd = new PDO('mysql:host=localhost;dbname=CMS','root','');
     //fontion pour suprimer les element lieu dans la base donnes

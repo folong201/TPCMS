@@ -1,5 +1,6 @@
 <?php
     require_once('../../function.php');
+    checkIfConnected();
     if (isset($_POST['name']) && 
     isset($_POST['biographie']) && 
     isset($_POST['dateNais']) && 

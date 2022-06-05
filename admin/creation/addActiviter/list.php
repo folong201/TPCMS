@@ -1,3 +1,7 @@
+<?php
+require_once('../../function.php');
+checkIfConnected();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,24 +11,29 @@
     <title>liste des project</title>
 </head>
 <body>
-    network_cell
+<center>
+        <h1>
+            mis a jour et supression d'une activiter
+        </h1>
+</center>
     <?php
         $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
         $sql = $database->query( "SELECT * FROM activiter");
 
         while($donnees = $sql->fetch()){
+            
+            $id = $donnees['id'];
+            echo"nom de l'activiter : ".$donnees['name']."<br>";
+            echo"description de l'activiter : ". $donnees['description']."<br>";
             ?>
+      <img src="./../../upload/<?php echo$donnees['photo'] ?>" alt="" style="max-width: 200px;max: heigth 200px;"><br>
 
         <a href="updateForm.php?id=<?php echo$donnees['id']; ?>">update</a> <br>
 
         <a href="delete.php?delete=0&id=<?php echo$donnees['id'] ?>">delete</a> <br>
             <?php
-
-            $id = $donnees['id'];
-            echo"nom du projet : ".$donnees['titre']."<br>";
-            echo $donnees['description']."<br>";
             // echo;
-
+            
             // echo"<a href=\"delete.php?id=".$x."?delete=delete>delete</a><br>";
 
         }
