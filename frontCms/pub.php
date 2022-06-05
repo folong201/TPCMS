@@ -24,14 +24,14 @@
     </a>
 
     <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="activites.html">Activites</a>
-        <a href="annonces.html">Annonces</a>
-        <a href="#home">Lieux Touristiques</a>
-        <a href="pub.html">Pub</a>
+        <a href="index.php">Accueil</a>
+        <a href="projets.php">Projets</a>
+        <a href="activites.php">Activites</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="lieux.php">Lieux touristiques</a>
+        <a href="pub.php">Pub</a>
     </nav>
-
+<!-- 
     <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
@@ -41,6 +41,9 @@
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div> -->
+    <!-- <div class="relate">
+        .
     </div>
 
     <div class="cart-items-container">
@@ -77,18 +80,18 @@
             </div>
         </div>
         <a href="#" class="btn">checkout now</a>
-    </div>
+    </div> -->
 
 </header>
 
-<!-- header section ends -->
+<!-- header section ends -->>
 
 <!-- home section starts  -->
 
 <section class="home" id="home">
 
     <div class="content">
-        <h3>Nos differents lieux tourristiques</h3>
+        <h3>Espace Pub</h3>
         <p>La Commune d'Arrondissement de Yaounde IV est située dans la Région du Centre, précisément au sud de la ville de Yaoundé et est implantée sur une superficie estimée environ à 5000 m2. Elle couvre en termes d’unité de commandement une superficie estimée à 57 km2.</p>
         <a href="#" class="btn">Lire Plus</a>
     </div>
@@ -101,12 +104,12 @@
 
 <section class="about" id="about">
 
-    <h1 class="heading"> <span>Hotel de </span> ville de Yaounde IV </h1>
+    <h1 class="heading"> Differentes <span>Activites dans </span> l'arrondissement de Yaounde IV </h1>
 
     <div class="row">
 
         <div class="image">
-            <img src="images/p5.jpg" alt="">
+            <img src="images/b4.jpg" alt="">
         </div>
 
         <div class="content">
@@ -123,33 +126,34 @@
 </section>
 
 <!-- about section ends -->
-
-<!-- menu section starts  -->
-
-
-
-
-<!-- menu section ends -->
-
-
-
-<!-- review section starts  -->
-
-
-<!-- review section ends -->
-
-<!-- contact section starts  -->
-
-<!-- contact section ends -->
-
-<!-- blogs section starts  -->
 <section class="blogs" id="blogs">
 
-    <h1 class="heading"> Nos <span>Lieux</span> </h1>
+    <h1 class="heading"> Annonces <span>Publicitaires</span> </h1>
 
     <div class="box-container">
-
-        <div class="box">
+    <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM pub";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+     ?>
+                    
+                    
+            <div class="box">
+                <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="" style="max-width: 200px;max-heigth: 200px;"> 
+                <h3><?php echo$data['name']; ?></h3>
+                <p>
+                <?php echo$data['description']; ?>
+               </p>
+        </div>
+                    
+                    
+        <?php
+                    
+                }
+        ?>
+        <!-- <div class="box">
             <div class="image">
                 <img src="images/blog-1.jpeg" alt="">
             </div>
@@ -185,11 +189,145 @@
             </div>
         </div>
 
+    </div> -->
+
+</section>
+<!-- menu section starts  -->
+
+<!-- <section class="menu" id="menu">
+
+    <h1 class="heading"> Produits <span> a venir </span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/menu-1.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/menu-2.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/menu-3.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/menu-4.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/menu-5.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/menu-6.png" alt="">
+            <h3>tasty and healty</h3>
+            <div class="price">$15.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
     </div>
 
 </section>
 
-<!-- blogs section ends -->
+<section class="about" id="about">
+
+    <h1 class="heading"> Une <span>Communaute </span> constitue de plus de <span> +20.000 personnes </span> </h1>
+    <div class="row">
+
+
+        <div class="image">
+            <img src="images/b4.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>La voix majeure de la commune de la ville, Yaoundé4</h3>
+            <p>Retrouver tous les services et activités disponibles dans la commune de yaounde IV pour votre bien être et votre épanouissement.</p>
+            <a href="#" class="btn">voir plus</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+
+
+<!-- review section starts  -->
+
+<!-- <section class="review" id="review">
+
+    <h1 class="heading"> Commentaires de quelques<span> Visiteurs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-1.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-1.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-3.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section> --> -->
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
 <section class="contact" id="contact">
 
     <h1 class="heading"> <span>contactez</span> Nous </h1>
@@ -218,6 +356,15 @@
     </div>
 
 </section>
+
+<!-- contact section ends -->
+
+<!-- blogs section starts  -->
+
+
+
+<!-- blogs section ends -->
+
 <!-- footer section starts  -->
 
 <section class="footer">
@@ -240,7 +387,7 @@
         <a href="#">blogs</a>
     </div>
 
-  
+   
 </section>
 
 <!-- footer section ends -->

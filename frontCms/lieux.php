@@ -24,14 +24,14 @@
     </a>
 
     <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="#home">Projets</a>
-        <a href="activites.html">Activites</a>
-        <a href="annonces.html">Annonces</a>
-        <a href="lieux.html">Lieux touristiques</a>
-        <a href="pub.html">Pub</a>
+        <a href="index.php">Accueil</a>
+        <a href="projets.php">Projets</a>
+        <a href="activites.php">Activites</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="lieux.php">Lieux touristiques</a>
+        <a href="pub.php">Pub</a>
     </nav>
-
+<!-- 
     <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
@@ -41,6 +41,9 @@
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div> -->
+    <!-- <div class="relate">
+        .
     </div>
 
     <div class="cart-items-container">
@@ -49,11 +52,7 @@
             <img src="images/cart-item-1.png" alt="">
             <div class="content">
                 <h3>cart item 01</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
-                <h3>cree par:</h3>
-                <h3>du :</h3>
-                <h3>au :</h3>
-                
+                <div class="price">$15.99/-</div>
             </div>
         </div>
         <div class="cart-item">
@@ -61,7 +60,7 @@
             <img src="images/cart-item-2.png" alt="">
             <div class="content">
                 <h3>cart item 02</h3>
-               
+                <div class="price">$15.99/-</div>
             </div>
         </div>
         <div class="cart-item">
@@ -69,7 +68,7 @@
             <img src="images/cart-item-3.png" alt="">
             <div class="content">
                 <h3>cart item 03</h3>
-               
+                <div class="price">$15.99/-</div>
             </div>
         </div>
         <div class="cart-item">
@@ -77,11 +76,11 @@
             <img src="images/cart-item-4.png" alt="">
             <div class="content">
                 <h3>cart item 04</h3>
-                
+                <div class="price">$15.99/-</div>
             </div>
         </div>
         <a href="#" class="btn">checkout now</a>
-    </div>
+    </div> -->
 
 </header>
 
@@ -92,7 +91,7 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3>Projets de la Mairie de Yaounde IV</h3>
+        <h3>Nos differents lieux tourristiques</h3>
         <p>La Commune d'Arrondissement de Yaounde IV est située dans la Région du Centre, précisément au sud de la ville de Yaoundé et est implantée sur une superficie estimée environ à 5000 m2. Elle couvre en termes d’unité de commandement une superficie estimée à 57 km2.</p>
         <a href="#" class="btn">Lire Plus</a>
     </div>
@@ -103,6 +102,28 @@
 
 <!-- about section starts  -->
 
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>Hotel de </span> ville de Yaounde IV </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/p5.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Histoire de la commune de la ville, Yaoundé4</h3>
+            <p>Retrouver tous les services et activités disponibles dans la commune de yaounde IV pour votre bien être et votre épanouissement.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo illo sequi et nostrum perspiciatis fuga rem mollitia molestiae? Fugiat velit quo dignissimos deserunt sequi quasi labore quis vero placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati corporis rem iure distinctio sequi temporibus, aliquid facilis numquam ipsa vitae, in incidunt odio molestiae qui deserunt commodi dolores debitis.
+            </p>
+            <a href="#" class="btn">voir plus</a>
+        </div>
+
+    </div>
+
+</section>
 
 <!-- about section ends -->
 
@@ -110,129 +131,51 @@
 
 
 
+
 <!-- menu section ends -->
 
-<section class="products" id="products">
 
-    <h1 class="heading"> Projets <span>de la </span> Mairie </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <div class="icons">
-             
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="images/product-1.png" alt="">
-            </div>
-            <div class="content">
-                <h3>cart item 01</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
-                <h3>cree par:john ndoe</h3>
-                <h3>du :15/09/2020</h3>
-                <h3>au :24/01/2022</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="icons">
-               
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="images/product-2.png" alt="">
-            </div>
-            <div class="content">
-                <h3>cart item 01</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
-                <h3>cree par:john ndoe</h3>
-                <h3>du :15/09/2020</h3>
-                <h3>au :24/01/2022</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="icons">
-               
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="images/product-3.png" alt="">
-            </div>
-            <div class="content">
-                <h3>cart item 01</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
-                <h3>cree par:john ndoe</h3>
-                <h3>du :<span>15/09/2020</span> </h3>
-                <h3>au :24/01/2022</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
 
 <!-- review section starts  -->
-
 
 
 <!-- review section ends -->
 
 <!-- contact section starts  -->
 
-
-
 <!-- contact section ends -->
 
 <!-- blogs section starts  -->
-
 <section class="blogs" id="blogs">
 
-    <h1 class="heading"> Evolution  <span>des travaux</span> </h1>
+    <h1 class="heading"> Nos <span>Lieux</span> </h1>
 
     <div class="box-container">
 
-        <div class="box">
-            <div class="image">
-                <img src="images/blog-1.jpeg" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">tasty and refreshing coffee</a>
-                <span>by admin / 21st may, 2021</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
+    <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM Lieux";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+     ?>
+                    
+                    
+            <div class="box">
+                <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="" style="max-width: 200px;max-heigth: 200px;"> 
+                <h3><?php echo$data['name']; ?></h3>
+                <p>
+                <?php echo$data['description']; ?>
+               </p>
         </div>
+                    
+                    
+        <?php
+                    
+                }
+        ?>
 
-        <div class="box">
+        <!-- <div class="box">
             <div class="image">
                 <img src="images/blog-2.jpeg" alt="">
             </div>
@@ -254,7 +197,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
                 <a href="#" class="btn">read more</a>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -289,7 +232,6 @@
     </div>
 
 </section>
-
 <!-- footer section starts  -->
 
 <section class="footer">

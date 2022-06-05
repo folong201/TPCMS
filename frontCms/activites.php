@@ -24,14 +24,14 @@
     </a>
 
     <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="#home">Activites</a>
-        <a href="annonces.html">Annonces</a>
-        <a href="lieux.html">Lieux touristiques</a>
-        <a href="pub.html">Pub</a>
+        <a href="index.php">Accueil</a>
+        <a href="projets.php">Projets</a>
+        <a href="activites.php">Activites</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="lieux.php">Lieux touristiques</a>
+        <a href="pub.php">Pub</a>
     </nav>
-
+<!-- 
     <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
@@ -41,6 +41,9 @@
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div> -->
+    <!-- <div class="relate">
+        .
     </div>
 
     <div class="cart-items-container">
@@ -77,12 +80,11 @@
             </div>
         </div>
         <a href="#" class="btn">checkout now</a>
-    </div>
+    </div> -->
 
 </header>
 
 <!-- header section ends -->
-
 <!-- home section starts  -->
 
 <section class="home" id="home">
@@ -132,16 +134,32 @@
 
     <div class="box-container">
 
-       
-
+    <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM activiter";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+     ?>
+                    
+                    
         <div class="box">
-            <img src="images/menu-3.png" alt="">
-            <h3>tasty and healty</h3>
-            <div class="price">$15.99 <span>20.99</span></div>
-            <a href="#" class="btn">add to cart</a>
+        <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="" style="max-width: 200px;max-heigth: 200px;">
+            <h3><?php echo$data['name']; ?></h3>
+            <div class="price"><?php echo$data['description']; ?></div>
         </div>
+        </div>
+                    
+                    
+        <?php
+                    
+                }
+                ?>
 
         <div class="box">
+
+
+        <!-- <div class="box">
             <img src="images/menu-4.png" alt="">
             <h3>tasty and healty</h3>
             <div class="price">$15.99 <span>20.99</span></div>
@@ -160,7 +178,7 @@
             <h3>tasty and healty</h3>
             <div class="price">$15.99 <span>20.99</span></div>
             <a href="#" class="btn">add to cart</a>
-        </div>
+        </div> -->
 
     </div>
 

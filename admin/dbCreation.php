@@ -1,6 +1,6 @@
 <?php
-require_once('function.php');
-checkIfConnected();
+// require_once('function.php');
+// checkIfConnected();
 ?>
 <?php
     function initDb(){
@@ -172,10 +172,11 @@ surname VARCHAR(30) NOT NULL,
 poste VARCHAR(50),
 pass VARCHAR(50)
 )";
-
-
+$sql2 = "INSERT INTO admin( userName, surname, poste, pass) VALUES ('admin','admin','admin','21232f297a57a5a743894a0e4a801fc3')";
+$conn->query($sql2);
 if ($conn->query($sql) === TRUE) {
 //   echo "Table admin created successfully";
+
 $x=4;
 } else {
   echo "Error creating table: " . $conn->error;

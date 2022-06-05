@@ -24,14 +24,14 @@
     </a>
 
     <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="activites.html">Activites</a>
-        <a href="#home">Annonces</a>
-        <a href="lieux.html">Lieux touristiques</a>
-        <a href="pub.html">Pub</a>
+        <a href="index.php">Accueil</a>
+        <a href="projets.php">Projets</a>
+        <a href="activites.php">Activites</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="lieux.php">Lieux touristiques</a>
+        <a href="pub.php">Pub</a>
     </nav>
-
+<!-- 
     <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
@@ -41,6 +41,9 @@
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div> -->
+    <!-- <div class="relate">
+        .
     </div>
 
     <div class="cart-items-container">
@@ -77,7 +80,7 @@
             </div>
         </div>
         <a href="#" class="btn">checkout now</a>
-    </div>
+    </div> -->
 
 </header>
 
@@ -99,28 +102,6 @@
 
 <!-- about section starts  -->
 
-<section class="about" id="about">
-
-    <h1 class="heading"> Differentes <span>Activites dans </span> l'arrondissement de Yaounde IV </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img src="images/b4.jpg" alt="">
-        </div>
-
-        <div class="content">
-            <h3>Decrets de la mairie</h3>
-            <p>Retrouver tous les services et activités disponibles dans la commune de yaounde IV pour votre bien être et votre épanouissement.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo illo sequi et nostrum perspiciatis fuga rem mollitia molestiae? Fugiat velit quo dignissimos deserunt sequi quasi labore quis vero placeat.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati corporis rem iure distinctio sequi temporibus, aliquid facilis numquam ipsa vitae, in incidunt odio molestiae qui deserunt commodi dolores debitis.
-            </p>
-            <a href="#" class="btn">voir plus</a>
-        </div>
-
-    </div>
-
-</section>
 
 <!-- about section ends -->
 
@@ -130,66 +111,118 @@
 
 <!-- menu section ends -->
 
+<section class="products" id="products">
 
-
-<!-- review section starts  -->
-
-<section class="review" id="review">
-
-    <h1 class="heading"> Annonces de  <span>Mariage</span> </h1>
+    <h1 class="heading"> Projets <span>de la </span> Mairie </h1>
 
     <div class="box-container">
+    <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM projects";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+     ?>
+                    
+                    
+        <div class="box">
+
+                <div class="image">
+                    <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="" style="max-width: 200px;max-heigth: 200px;"> 
+                </div>
+            <p>
+            <?php echo$data['biographie']; ?>
+           </p>             
+           <div class="content">
+                <h3><?php echo$data['instigateur']; ?></h3>
+                <p>
+                <?php echo$data['debut']; ?> 
+               </p>
+                <h3> date de debut : <?php echo$data['debut']; ?></h3>
+                <h3>duree : <?php echo$data['duree']; ?></h3>
+            </div>
+        </div>
+                    
+                    
+        <?php
+                    
+                }
+        ?>
+
+<!-- 
+        <div class="box">
+            <div class="icons">
+               
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="images/product-2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>cart item 01</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
+                <h3>cree par:john ndoe</h3>
+                <h3>du :15/09/2020</h3>
+                <h3>au :24/01/2022</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$15.99 <span>$20.99</span></div>
+            </div>
+        </div>
 
         <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b2.jpeg" class="user" alt="">
-            <h3>john deo & Brenda</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div class="icons">
+               
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
             </div>
-        </div>
-
-        <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b3.jpeg" class="user" alt="">
-            <h3>john deo & Brenda</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div class="image">
+                <img src="images/product-3.png" alt="">
             </div>
-        </div>
-        
-        <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b3.jpeg" class="user" alt="">
-            <h3>john deo & Brenda</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div class="content">
+                <h3>cart item 01</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur blanditiis, dolore omnis quas voluptatem explicabo</p>
+                <h3>cree par:john ndoe</h3>
+                <h3>du :<span>15/09/2020</span> </h3>
+                <h3>au :24/01/2022</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$15.99 <span>$20.99</span></div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
 </section>
 
-<!-- review section ends -->
-<section class="blogs" id="blogs">
+<!-- review section starts  -->
 
-    <h1 class="heading"> Marches <span>Publics</span> </h1>
+
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+
+
+<!-- contact section ends -->
+
+<!-- blogs section starts  -->
+
+<!-- <section class="blogs" id="blogs">
+
+    <h1 class="heading"> Evolution  <span>des travaux</span> </h1>
 
     <div class="box-container">
 
@@ -231,9 +264,9 @@
 
     </div>
 
-</section>
-<!-- contact section starts  -->
+</section> -->
 
+<!-- blogs section ends -->
 <section class="contact" id="contact">
 
     <h1 class="heading"> <span>contactez</span> Nous </h1>
@@ -263,12 +296,6 @@
 
 </section>
 
-<!-- contact section ends -->
-
-<!-- blogs section starts  -->
-
-<!-- blogs section ends -->
-
 <!-- footer section starts  -->
 
 <section class="footer">
@@ -291,7 +318,7 @@
         <a href="#">blogs</a>
     </div>
 
-   
+  
 </section>
 
 <!-- footer section ends -->

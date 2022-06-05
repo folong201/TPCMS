@@ -29,12 +29,12 @@
     </a>
 
     <nav class="navbar">
-        <a href="#home">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="activites.html">Activites</a>
-        <a href="annonces.html">Annonces</a>
-        <a href="lieux.html">Lieux touristiques</a>
-        <a href="pub.html">Pub</a>
+        <a href="index.php">Accueil</a>
+        <a href="projets.php">Projets</a>
+        <a href="activites.php">Activites</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="lieux.php">Lieux touristiques</a>
+        <a href="pub.php">Pub</a>
     </nav>
 <!-- 
     <div class="icons">
@@ -47,7 +47,7 @@
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
     </div> -->
-    <div class="relate">
+    <!-- <div class="relate">
         .
     </div>
 
@@ -85,7 +85,7 @@
             </div>
         </div>
         <a href="#" class="btn">checkout now</a>
-    </div>
+    </div> -->
 
 </header>
 
@@ -131,202 +131,13 @@
 </section>
 
 <!-- about section ends -->
-
-<!-- menu section starts  -->
-
-<section class="review" id="review">
-
-   
-    <h1 class="heading"> Personnel <span>de la </span> Mairie </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b2.jpeg" class="user" alt="">
-            <h3>john deo | <span> Maire </span> </h3>
-            <h3>32 Ans </h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b3.jpeg" class="user" alt="">
-            <h3>john deo | <span>Secretaire</span></h3>
-            <h3>32 Ans </h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-        </div>
-        
-        <div class="box">
-            <img src="images/quote-img.png" alt="" class="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-            <img src="images/b3.jpeg" class="user" alt="">
-            <h3>john deo | <span>1er Adjoin</span></h3>
-            <h3>32 Ans </h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- menu section ends -->
-
-<section class="products" id="products">
-
- <h1 class="heading"> Conseil Municipale <span>de La Mairie</span> </h1>
-    <div class="box-container">
-            <?php
-                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
-                $sql = "SELECT * FROM membre";
-                $reponce = $database->query($sql);
-                while($data = $reponce->fetch()){
-                    
-                    ?>
-                    
-                    
-                    <div class="box">
-            <!-- <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div> -->
-            <div class="image">
-                <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="">
-            </div>
-            <div class="content">
-                <h3><?php echo$data['name']; ?> | Maire</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">50 Ans </div>
-            </div>
-        </div>
-                    
-                    
-                    <?php
-                    
-                }
-            ?>
-        <div class="box">
-            <!-- <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div> -->
-            <div class="image">
-                <img src="images/b3.jpeg" alt="">
-            </div>
-            <div class="content">
-                <h3>fresh coffee | Maire</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">50 Ans </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <!-- <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div> -->
-            <div class="image">
-                <img src="images/b3.jpeg" alt="">
-            </div>
-            <div class="content">
-                <h3>fresh coffee | Maire</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">50 Ans </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <!-- <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div> -->
-            <div class="image">
-                <img src="images/b3.jpeg" alt="">
-            </div>
-            <div class="content">
-                <h3>fresh coffee | Maire</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">50 Ans </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- review section starts  -->
-
-
-<!-- review section ends -->
-
-<!-- contact section starts  -->
-
-<!-- contact section ends -->
-
 <!-- blogs section starts  -->
 <section class="blogs" id="blogs">
-
+    
     <h1 class="heading"> Notre <span>Mission</span> </h1>
 
     <div class="box-container">
-
+        
         <div class="box">
             <div class="image">
                 <img src="images/blog-1.jpeg" alt="">
@@ -369,10 +180,165 @@
 
 <!-- blogs section ends -->
 
+<section class="products" id="products">
+
+ <h1 class="heading"> Conseil Municipale <span>de La Mairie</span> </h1>
+    <div class="box-container">
+        <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM membre";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+                    ?>
+                    
+                    
+                    <div class="box">
+                        <!-- <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div> -->
+            <div class="image">
+                <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="">
+            </div>
+            <div class="content">
+                <h3><?php echo$data['name']; ?> | Maire</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">50 Ans </div>
+            </div>
+        </div>
+                    
+                    
+        <?php
+                    
+                }
+                ?>
+    </div>
+    
+</section>
+
+<!-- review section starts  -->
+
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<!-- contact section ends -->
+
+
+
+<!-- menu section starts  -->
+
+<section class="review" id="review">
+
+   
+    <h1 class="heading"> Personnel <span>de la </span> Mairie </h1>
+    <div class="box-container">
+    <?php
+                $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
+                $sql = "SELECT * FROM Employer";
+                $reponce = $database->query($sql);
+                while($data = $reponce->fetch()){
+                    
+     ?>
+                    
+                    
+        <div class="box">
+
+                <div class="image">
+                    
+                    <img src="images/quote-img.png" alt="" class="quote">
+                </div>
+            <p>
+            <?php echo$data['biographie']; ?>
+           </p>
+           <img src="../admin/upload/<?php echo$data['photo']; ?>" alt="" style="max-width: 200px;max-heigth: 200px;">                
+            <div class="content">
+                <h3><?php echo$data['name']; ?> | <?php echo$data['dateNais']; ?></h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 </p>
+            
+                <div class="price">
+                    <a href="../admin/upload/<?php echo$data['cv']; ?>" class="btn">CV</a>
+                </div>
+            </div>
+        </div>
+                    
+                    
+        <?php
+                    
+                }
+                ?>
+
+        <!-- <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.
+            </p>
+            <img src="images/b2.jpeg" class="user" alt="" >
+            <h3>john deo | <span> Maire </span> </h3>
+            <h3>32 Ans </h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/b3.jpeg" class="user" alt="">
+            <h3>john deo | <span>Secretaire</span></h3>
+            <h3>32 Ans </h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/b3.jpeg" class="user" alt="">
+            <h3>john deo | <span>1er Adjoin</span></h3>
+            <h3>32 Ans </h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+        </div> -->
+
+    </div>
+
+</section>
+
+
+<!-- menu section ends -->
+
 <!-- footer section starts  -->
 
 <section class="footer">
-
+    
     <div class="share">
         <a href="#" class="fab fa-facebook-f"></a>
         <a href="#" class="fab fa-twitter"></a>
