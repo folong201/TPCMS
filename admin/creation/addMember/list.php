@@ -13,18 +13,20 @@ checkIfConnected();
 <body>
 <center>
         <h1>
-            mise ajour et supression des employer
+            mise a jour et supression des membres
         </h1>
 </center>
     <?php
         $database = new PDO('mysql:host=localhost;dbname=CMS','root','');
-        $sql = $database->query( "SELECT * FROM employer");
+        $sql = $database->query( "SELECT * FROM membre");
 
         while($donnees = $sql->fetch()){
-            // echo $donnees['photo'];
+
             $id = $donnees['id'];
-            echo"nom de l'employer : ".$donnees['name']."<br>";
-            echo $donnees['biographie']."<br>";
+            echo"<br><br>nom du menbre de la comune : ".$donnees['name']."<br>";
+            echo"description". $donnees['description']."<br>";
+            echo"Poste :". $donnees['poste']."<br>";
+
             // echo;
             ?>
          <img src="./../../upload/<?php echo$donnees['photo'] ?>" alt="" style="max-width: 200px;max: heigth 200px;"><br>

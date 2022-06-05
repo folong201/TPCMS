@@ -1,5 +1,7 @@
 <?php
     // require_once('./function.php');
+    require_once('../function.php');
+checkIfConnected();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,7 @@
         <h1>
             ajouter un admin
         </h1>
-    </center>
+</center>
     <div class="container">
         <div class="form">
             <form action="register.php" method="post">
@@ -27,9 +29,27 @@
                 <input type="text" name="surname" placeholder="surname"> <br><br>
                 <input type="text" name="poste" placeholder="poste"> <br><br>
                 <br>
-                <input type="submit">
+                <input type="submit" id="submit">
             </form>
         </div>
     </div>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            background-color: #f60;
+            margin-left: 025%;
+            margin-right: 025%;
+            display: flex;
+            text-align: center;
+            color: white;
+            font-size: large;
+        }
+        input{
+            width: 100%;
+            margin: 5px;
+            margin-left: 100px;
+        }       
+    </style>
 </body>
 </html>

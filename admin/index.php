@@ -79,7 +79,7 @@
 
     <center>
         <h2>
-            metre a jour des elements
+            mise a jour et supression des elements
         </h2>
     </center>
     <br>
@@ -88,42 +88,32 @@
         metre a jour ou ssuprimer un project
     </a>
     
-    <a href="creation/addMember/addMemberForm.php">
-        metre a jour ou ssuprimer un membre
+    <a href="creation/addMember/list.php">
+        metre a jour ou ssuprimer un membre de la commune
     </a> <br>
     <a href="addAdmin/list.php">
         metre a jour ou ssuprimer un admin
     </a>
     
-    <a href="creation/addMember/">
+    <a href="creation/addActiviter/list.php">
         metre a jour ou ssuprimer une activiter
     </a>
     
-    <a href="creation/addMember/">
+    <a href="creation/addAnonce/list.php">
         metre a jour ou ssuprimer une annonce
     </a>
     
-    <a href="creation/addMember/">
+    <a href="creation/addPub/list.php">
         metre a jour ou ssuprimer une pub
     </a>
     
-    <a href="creation/addMember/">
-        metre a jour ou ssuprimer un membre de la comune
-    </a>
-    
-    <a href="creation/addMember/">
-        metre a jour ou ssuprimer un project
-    </a>
-    
-    <a href="creation/addMember/">
-        metre a jour ou ssuprimer une annonce
 
-    <a href="creation/addMember/">
+    <a href="creation/addEmploayer/list.php">
         metre a jour ou ssuprimer un EMployer
     </a>
     
     
-    <a href="creation/addMember/">
+    <a href="creation/addTouristiqPlace/list.php">
         metre a jour ou ssuprimer un site touristique
     </a>
     
@@ -132,11 +122,11 @@
 
 
 
-<center>
+<!-- <center>
         <h2>
             suprimer des elements
         </h2>
-    </center>
+</center>
     <br>
     <hr>
     <a href="creation/addMember/">
@@ -180,20 +170,24 @@
     
     <a href="creation/addMember/">
         Ajouter un site touristique
-    </a>
+    </a> -->
 
 <div class="container" style="background-color:green;">
     <center>
         <h1>
+            <a href="dbCreation.php">
             initialiser la base de donnees.
+            </a>
         </h1>
     </center>
 </div>
 <center>
     <!-- <a href="disconnect.php" > -->
     <div class="container" style="background-color: red;">
-             Se deconnecter
-             
+             <a href="disconnect.php">
+
+                 Se d   econnecter
+             </a>
             </div>
         
 </center>

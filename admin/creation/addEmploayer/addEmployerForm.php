@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<?php
+require_once('../../function.php');
+checkIfConnected();
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +15,7 @@
             ajouter une employer
         </h1>
 </center>
-    <form action="addEmployerSave.php" method="post" enctype="multipart/form-data">
+    <!-- <form action="addEmployerSave.php" method="post" enctype="multipart/form-data">
     <label for="name">nom De l;employer</label>
         <input type="text" name="name" require > <br> <br>
 
@@ -27,12 +31,12 @@ biographie de l'employer
         
         <!-- <label for="duree">Duree</label>
         <input type="text" name="duree" require > -->
-        <br> <br>
+        <!-- <br> <br>
         <h2>image de l'employer</h2>
         <label for="fileUpload">Fichier:</label>
-        <input type="file" name="photo" id="fileUpload"> <br> <br>
+        <input type="file" name="photo" id="fileUpload"> <br> <br> -->
 
-    <div class="cont">
+    <div class="cont"> 
     <form action="addEmployerSave.php" method="post" enctype="multipart/form-data">
         <h1>Ajout d'un Employer</h1>
         <table>
@@ -47,11 +51,11 @@ biographie de l'employer
                 </textarea></td>
             </tr>
             <tr>
-                <td><label for="instigateur">Date de naissance</label></td>
+                <td><label for="instigateur">Poste Occuper </label></td>
                 <td> <input type="text" name="poste" require ></td>
             </tr>
             <tr>
-                <td><label for="poste">Poste Occuper</label></td>
+                <td><label for="poste"> Date de naissance</label></td>
                 <td><input type="date" name="dateNais" id="instigateur" require  ></td>
             </tr>
             <tr>
@@ -60,6 +64,11 @@ biographie de l'employer
             <tr>
                 <td><label for="fileUpload">Fichier:</label></td>
                 <td><input type="file" name="photo" id="fileUpload"></td>
+            </tr>
+            <tr>
+            <br>
+                <tr><label for="fileUpload">cv:</label></tr>
+                <tr><input type="file" name="cv" class="fileUpload"></tr>
             </tr>
             <tr>
                 <td></td>

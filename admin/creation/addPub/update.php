@@ -1,5 +1,6 @@
 <?php
     require_once('controller.php');
+    checkIfConnected();
     if (isset($_POST['name']) && 
     isset($_POST['description']) &&
     isset($_POST['id'])&&

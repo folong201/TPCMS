@@ -1,4 +1,8 @@
 <?php
+require_once('function.php');
+checkIfConnected();
+?>
+<?php
     function initDb(){
         $servername = "localhost";
         $username = "root";
@@ -12,7 +16,7 @@
         }
         
         // Create database
-        $sql = "CREATE DATABASE IF NOT exists CC";
+        $sql = "CREATE DATABASE IF NOT exists CMS";
         $conn->query($sql);
         // if ( === TRUE) {
         //     echo "Database created successfully";
@@ -21,7 +25,8 @@
         // }
         
         $conn->close();
-    }    
+    }   
+    initDb(); 
     //initialisation des tables et de la
     
     // function initTable(){
@@ -208,8 +213,7 @@ name VARCHAR(30) NOT NULL,
 photo VARCHAR(30) NOT NULL,
 poste VARCHAR(50),
 biographie VARCHAR(50),
-dateNais DATE,
-reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+dateNais DATE
 )";
 
 
@@ -253,6 +257,7 @@ $sql = "CREATE TABLE  if not exists employer (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(30) NOT NULL,
 photo VARCHAR(30) NOT NULL,
+cv VARCHAR(60),
 poste VARCHAR(50),
 biographie VARCHAR(50),
 dateNais DATE,

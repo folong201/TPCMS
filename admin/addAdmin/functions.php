@@ -1,4 +1,6 @@
 <?php
+require_once('../function.php');
+checkIfConnected();
 require_once('controller.php');
 //function to uodate
 if (isset($_POST['update']) && isset($_POST['id']) && isset($_POST['description']) && isset($_POST['name']) && isset($_POST['photo'])) {

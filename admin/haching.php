@@ -1,3 +1,7 @@
+<?php
+require_once('function.php');
+checkIfConnected();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

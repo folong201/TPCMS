@@ -1,3 +1,7 @@
+<?php
+require_once('../../function.php');
+checkIfConnected();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +16,7 @@
         </h1>
 </center>
     <div class="cont">
-    <form action="addAnnoceSave.php" method="post" enctype="multipart/form-data">
+    <form action="addAnnonceSave.php" method="post" enctype="multipart/form-data">
         <h1>Creation d'une Annonce</h1>
     <label for="name">nom De L'Annonce</label>
         <input type="text" name="name" require > <br> <br>
