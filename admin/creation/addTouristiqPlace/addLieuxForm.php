@@ -22,7 +22,7 @@ checkIfConnected();
     <div class="cont">
     <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
     <h1>Ajout d'un lieu touristique</h1>
-        <label for="name">nom Du menbre</label>
+        <label for="name">nom Du Lieux</label>
         <input type="text" name="name" require > <br> <br>
 
         <textarea name="description" id="id" cols="30" rows="10" require    >

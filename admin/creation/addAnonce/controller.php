@@ -12,9 +12,15 @@
     }
 
     function update($name,$description,$image,$id){
-        global $bdd;
-        $sql = "UPDATE annonce SET name=?, description=?, image=? WHERE id = ?";
-        $requette = $bdd->prepare($sql);
-        $requette->execute(array($name,$description,$image,$id));
+        $bdd = new PDO('mysql:host=localhost;dbname=CMS','root','');
+        $sql = "UPDATE annonce SET name='$name', photo='$image', description='$description' where id='$id' ";
+        // $sql2 =  "UPDATE  annonce SET name='$name', photo='$image', description='$description', where id='$id' ";
+        try{
+            $requette = $bdd->prepare($sql);
+            $requette->execute();
+        }catch(PDOException $e){
+            die($e);
+        }
+
     }
 ?>

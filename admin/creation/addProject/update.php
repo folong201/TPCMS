@@ -1,6 +1,6 @@
 <?php
     require_once('controller.php');
-    checkIfConnected();
+    // checkIfConnected();
     if (isset($_POST['titre']) && 
     isset($_POST['description']) && 
     isset($_POST['instigateur']) && 

@@ -52,8 +52,8 @@ checkIfConnected();
         <td><input type="text" name="titre" require placeholder="titre du project"></td>
     </tr>
     <tr>
-        <td><label for="instigateur">Description du projet</label></td>
-        <td><textarea name="biographie" id="id" cols="30" rows="10" require  placeholder=""  >
+        <td><label for="description">Description du projet</label></td>
+        <td><textarea name="description" id="id" cols="30" rows="10" require  placeholder=""  >
 description du project
         </textarea></td>
     </tr>
@@ -65,7 +65,10 @@ description du project
         <td><label for="duree">Duree</label></td>
         <td><input type="text" name="duree" require ></td>
     </tr>
-    
+    <tr>
+        <td> <label for="instigateur">instigateur</label></td>
+        <td><input type="text" name="instigateur" require ></td>
+    </tr>
     <tr>
         <td colspan="2"> <h2>image du projet</h2></td>
         

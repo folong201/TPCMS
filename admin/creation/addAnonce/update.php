@@ -1,6 +1,6 @@
 <?php
     require_once('controller.php');
-    checkIfConnected();
+    // checkIfConnected();
     if (isset($_POST['name']) && 
     isset($_POST['description']) &&
     isset($_POST['id'])&&
@@ -9,7 +9,7 @@
         //$name,$description,$image,$id
         update($_POST['name'],$_POST['description'],$_FILES['photo']['name'],$_POST['id']);
         // die("stop");
-
+        televerser();
         //redirection
         header('Location: ../../index.php');
     }

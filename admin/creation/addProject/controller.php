@@ -1,7 +1,4 @@
-<?php
-require_once('../../function.php');
-checkIfConnected();
-?>
+
 <?php
     // require_once('../../function.php');
     $bdd = new PDO('mysql:host=localhost;dbname=CMS','root','');
