@@ -21,7 +21,7 @@ checkIfConnected();
     <div class="cont">
         <form action="update.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo$_GET['id']; ?>"> <br>
-            <h1>Ajout d'un nouveau membre </h1>
+            <h1>Mise a jour d'un nouveau membre </h1>
             <table>
                 
                 <tr>

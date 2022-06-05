@@ -79,10 +79,6 @@ biographie de l'employer
         
         <!-- <label for="duree">Duree</label>
         <input type="text" name="duree" require > -->
-       
-
-
-       
     </table>
     </form>
 </body>

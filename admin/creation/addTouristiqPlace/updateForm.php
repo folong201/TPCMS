@@ -5,16 +5,29 @@ checkIfConnected();
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <title>Formulaire de creation d'un Lieux touristique</title>
-    </head>
-    <body>
-        <form action="update.php" method="post" enctype="multipart/form-data">
-            <label for="name">nom Du lieu</label>
-            <input type="text" name="name" require > <br> <br>
-            <input type="hidden" name="id" value="<?php echo$_GET['id']; ?>"> <br>
+    <meta charset="UTF-8">
+    <title>Formulaire de creation d'un Lieux touristique</title>
+    <link rel="stylesheet" href="../../../assets/css/add.css">
+</head>
+<body>
+    
+<center>
+    <h1>
+            metre a jour un lieu touristique
+    </h1>
+</center>
+    <form action="update.php" method="post" enctype="multipart/form-data">
+    <!-- <label for="name">nom site tourristique</label> -->
 
-        <textarea name="description" id="id" cols="30" rows="10" require    >description du cite touristique
+    <input type="hidden" name="id" value="<?php echo$_GET['id']; ?>"> 
+    <div class="cont">
+    <form action="addLieuxSave.php" method="post" enctype="multipart/form-data">
+    <h1>metre a jour lieu touristique</h1>
+        <label for="name">nom Du menbre</label>
+        <input type="text" name="name" require > <br> <br>
+
+        <textarea name="description" id="id" cols="30" rows="10" require    >
+description du site touristique
         </textarea> <br> <br>
 
        
@@ -27,5 +40,6 @@ checkIfConnected();
 
         <input type="submit" name="submit" value="Sauvegarder">
     </form>
+</div>
 </body>
 </html>
