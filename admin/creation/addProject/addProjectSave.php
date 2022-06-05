@@ -8,7 +8,7 @@
     isset($_POST['debut']) && 
     isset($_POST['duree']) && 
     isset($_FILES["photo"]))
-   {
+    {
         //fabrication du nouveau nom du fichier image
         $titre = $_POST['titre'];
         $description = $_POST['description'];
@@ -16,22 +16,23 @@
         $debut = $_POST['debut'];
         $image = $filename = $_FILES["photo"]["name"];
         $instigateur = $_POST['instigateur'];
-
+        
         addProjectSave(
-                    $titre,
-                    $description,
+            $titre,
+            $description,
                     $instigateur,
                     $debut,
                     $duree,
                     $image,
                     1
-                    );
+                );
                 //  televerser();
-      
-    }else{
+                
+            }else{
                 echo"donner manqaunte";
          }
-    televerser();
+         televerser();
+        //  die($_FILES['photo']['name']);
         
         header("Location: ../../index.php");
 ?>

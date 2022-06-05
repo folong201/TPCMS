@@ -29,14 +29,18 @@ checkIfConnected();
         <td><input type="text" name="titre" require ></td>
     </tr>
     <tr>
-        <td><label for="instigateur">Description du projet</label></td>
-        <td><textarea name="biographie" id="id" cols="30" rows="10" require    >
-            biographie du membre
+        <td><label for="biographie">Description du projet</label></td>
+        <td><textarea name="description" id="id" cols="30" rows="10" require    >
+description du projet
         </textarea></td>
     </tr>
     <tr>
         <td> <label for="debut">debut</label></td>
         <td><input type="date" name="debut" require ></td>
+    </tr>
+    <tr>
+        <td> <label for="debut">instigateur</label></td>
+        <td><input type="text" name="instigateur" require ></td>
     </tr>
     <tr>
         <td><label for="duree">Duree</label></td>
